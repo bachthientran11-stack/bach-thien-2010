@@ -70,7 +70,7 @@
 </div>
 <div class="hero-art" aria-label="Khung ảnh kỷ niệm gia đình">
 <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
-<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder" hidden></div><img id="heroImage" src="./1792159749105_110008692609126310_7513591495099098469_3a3f1b9a10d4782ea013c94776fc7c6a.jpg" alt="Ảnh gia đình trong chuyến đi" loading="eager"><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
+<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder" hidden></div><img id="heroImage" src="https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159749105_110008692609126310_7513591495099098469_3a3f1b9a10d4782ea013c94776fc7c6a.jpg" alt="Ảnh gia đình trong chuyến đi" loading="eager" onerror="this.onerror=null;this.src='./1792159748990_110008692609126310_7513591495099098469_88ffce7ccc97c7fd8b9b2f72da61ebb6.jpg'"><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
 <div class="stamp">for my<br>favorite<br>people ♡</div>
 </div>
 </section>
@@ -153,3 +153,10 @@ $('#photoUpload').addEventListener('change',e=>{const files=Array.from(e.target.
 </script>
 </body>
 </html>
+<style id="hero-image-recovery">
+/* Khôi phục ảnh đầu trang và ưu tiên giữ trọn khung cảnh/gương mặt gia đình */
+#heroFrame{position:relative;overflow:visible}
+#heroFrame img#heroImage{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;z-index:1!important;left:14px!important;top:14px!important;right:14px!important;bottom:54px!important;width:calc(100% - 28px)!important;height:calc(100% - 68px)!important;object-fit:contain!important;object-position:center center!important;background:#e9d8c2!important;filter:none!important}
+#heroFrame .placeholder[hidden]{display:none!important}
+@media(max-width:760px){#heroFrame img#heroImage{object-fit:contain!important;object-position:center center!important}}
+</style>
