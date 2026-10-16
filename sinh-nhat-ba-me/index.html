@@ -31,7 +31,7 @@
 </div>
 <div class="hero-art" aria-label="Khung ảnh kỷ niệm gia đình">
 <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
-<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder"><div><span>♡</span><b>Ảnh gia đình mình</b><br><small>Chọn ảnh bên dưới để thay vào nhé</small></div></div><img id="heroImage" alt="Ảnh gia đình" hidden><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
+<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder" hidden></div><img id="heroImage" src="1792159749105_110008692609126310_7513591495099098469_3a3f1b9a10d4782ea013c94776fc7c6a.jpg" alt="Ảnh gia đình trong chuyến đi" loading="eager"><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
 <div class="stamp">for my<br>favorite<br>people ♡</div>
 </div>
 </section>
@@ -61,12 +61,12 @@
 </div>
 </div></section>
 <section class="section" id="album" style="padding-top:55px"><div class="wrap">
-<div class="section-head"><div class="eyebrow">little moments, forever</div><h2>Album <span class="serif-italic">nhà mình.</span></h2><p>Chọn ảnh trong máy để đưa vào cuốn album này. Ảnh chỉ hiển thị trong trình duyệt của bạn, không tự tải lên GitHub.</p></div>
-<div class="album-tools"><label class="upload-label">＋ Thêm ảnh gia đình <input id="photoUpload" type="file" accept="image/*" multiple></label></div>
+<div class="section-head"><div class="eyebrow">little moments, forever</div><h2>Album <span class="serif-italic">nhà mình.</span></h2><p>Ba khoảnh khắc gia đình mình, được giữ lại trong cuốn album nhỏ này.</p></div>
+
 <div class="album" id="albumGrid">
-<div class="album-card" style="--r:-2deg"><div class="album-image"><span class="emoji">🏡</span></div><p>nơi mình thuộc về</p></div>
-<div class="album-card" style="--r:1.5deg"><div class="album-image"><span class="emoji">🍲</span></div><p>mùi vị của nhà</p></div>
-<div class="album-card" style="--r:-1deg"><div class="album-image"><span class="emoji">🚗</span></div><p>những chuyến đi cùng nhau</p></div>
+<div class="album-card" style="--r:-2deg"><div class="album-image"><img src="1792159748990_110008692609126310_7513591495099098469_88ffce7ccc97c7fd8b9b2f72da61ebb6.jpg" alt="Ảnh gia đình 1" loading="lazy"></div><p>một khoảnh khắc bên nhau</p></div>
+<div class="album-card" style="--r:1.5deg"><div class="album-image"><img src="1792159749038_110008692609126310_7513591495099098469_ff2963a84f5ca889b5f733a7401aef82.jpg" alt="Ảnh gia đình 2" loading="lazy"></div><p>cùng nhau đi muôn nơi</p></div>
+<div class="album-card" style="--r:-1deg"><div class="album-image"><img src="1792159749066_110008692609126310_7513591495099098469_52dfc30332bee404fafaf79ad651325c.jpg" alt="Ảnh gia đình 3" loading="lazy"></div><p>những ngày thật đáng nhớ</p></div>
 </div>
 </div></section>
 <section class="section letter-section" id="thu"><div class="wrap">
@@ -109,7 +109,7 @@ let audioCtx=null,oscillators=[],musicOn=false,musicTimer=null;
 function startMusic(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC){toast('Trình duyệt này chưa hỗ trợ nhạc nền.');return}audioCtx=audioCtx||new AC();audioCtx.resume();musicOn=true;$('#musicToggle').setAttribute('aria-pressed','true');$('#musicLabel').textContent='Tắt nhạc nền';const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];let i=0;function note(){if(!musicOn||!audioCtx)return;const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=notes[i++%notes.length];gain.gain.setValueAtTime(.0001,audioCtx.currentTime);gain.gain.exponentialRampToValueAtTime(.035,audioCtx.currentTime+.08);gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+1.1);osc.connect(gain);gain.connect(audioCtx.destination);osc.start();osc.stop(audioCtx.currentTime+1.15);musicTimer=setTimeout(note,720)}note()}
 function stopMusic(){musicOn=false;clearTimeout(musicTimer);$('#musicToggle').setAttribute('aria-pressed','false');$('#musicLabel').textContent='Bật nhạc nền'}
 $('#musicToggle').addEventListener('click',()=>{if(musicOn)stopMusic();else startMusic()});
-$('#photoUpload').addEventListener('change',e=>{const files=Array.from(e.target.files||[]).filter(f=>f.type.startsWith('image/'));if(!files.length)return;const grid=$('#albumGrid');files.forEach((file,index)=>{const url=URL.createObjectURL(file);const card=document.createElement('div');card.className='album-card';card.style.setProperty('--r',((index%3)-1)+'deg');const image=document.createElement('div');image.className='album-image';const img=document.createElement('img');img.src=url;img.alt='Ảnh kỷ niệm gia đình';image.appendChild(img);const cap=document.createElement('p');cap.textContent=file.name.replace(/\.[^.]+$/,'')||'khoảnh khắc đáng nhớ';card.append(image,cap);grid.prepend(card);if(!$('#heroImage').hidden===false){}if(index===0){$('#heroImage').src=url;$('#heroImage').hidden=false;$('#heroPlaceholder').hidden=true}});toast('Đã thêm '+files.length+' ảnh vào album trên thiết bị này.');e.target.value=''});
+
 })();
 </script>
 </body>
