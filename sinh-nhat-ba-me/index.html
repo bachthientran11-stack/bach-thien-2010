@@ -24,6 +24,13 @@
  .album-card:nth-child(2) .album-image img{object-position:center 54%}
  .album-card:nth-child(3) .album-image img{object-position:center 78%}
 }
+/* Final photo fix: use same-folder image files and never crop family members */
+.photo-frame{isolation:isolate;overflow:hidden}
+.photo-frame:before{display:none}
+.photo-frame img#heroImage{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;z-index:1;inset:14px 14px 54px!important;width:calc(100% - 28px)!important;height:calc(100% - 68px)!important;object-fit:contain!important;object-position:center center!important;background:#e9d8c2!important;filter:none!important}
+.photo-frame .placeholder[hidden]{display:none!important}
+.album-image{overflow:hidden;background:#eadbc8}
+.album-image img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;background:#eadbc8!important}
 </style>
 </head>
 <body>
@@ -45,7 +52,7 @@
 </div>
 <div class="hero-art" aria-label="Khung ảnh kỷ niệm gia đình">
 <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
-<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder" hidden></div><img id="heroImage" src="https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159749105_110008692609126310_7513591495099098469_3a3f1b9a10d4782ea013c94776fc7c6a.jpg" alt="Ảnh gia đình trong chuyến đi" loading="eager"><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
+<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder" hidden></div><img id="heroImage" src="./1792159749105_110008692609126310_7513591495099098469_3a3f1b9a10d4782ea013c94776fc7c6a.jpg" alt="Ảnh gia đình trong chuyến đi" loading="eager"><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
 <div class="stamp">for my<br>favorite<br>people ♡</div>
 </div>
 </section>
@@ -78,9 +85,9 @@
 <div class="section-head"><div class="eyebrow">little moments, forever</div><h2>Album <span class="serif-italic">nhà mình.</span></h2><p>Ba khoảnh khắc gia đình mình, được giữ lại trong cuốn album nhỏ này.</p></div>
 
 <div class="album" id="albumGrid">
-<div class="album-card" style="--r:-2deg"><div class="album-image"><img src="https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159748990_110008692609126310_7513591495099098469_88ffce7ccc97c7fd8b9b2f72da61ebb6.jpg" alt="Ảnh gia đình 1" loading="lazy"></div><p>một khoảnh khắc bên nhau</p></div>
-<div class="album-card" style="--r:1.5deg"><div class="album-image"><img src="https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159749038_110008692609126310_7513591495099098469_ff2963a84f5ca889b5f733a7401aef82.jpg" alt="Ảnh gia đình 2" loading="lazy"></div><p>cùng nhau đi muôn nơi</p></div>
-<div class="album-card" style="--r:-1deg"><div class="album-image"><img src="https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159749066_110008692609126310_7513591495099098469_52dfc30332bee404fafaf79ad651325c.jpg" alt="Ảnh gia đình 3" loading="lazy"></div><p>những ngày thật đáng nhớ</p></div>
+<div class="album-card" style="--r:-2deg"><div class="album-image"><img src="./1792159748990_110008692609126310_7513591495099098469_88ffce7ccc97c7fd8b9b2f72da61ebb6.jpg" alt="Ảnh gia đình 1" loading="lazy"></div><p>một khoảnh khắc bên nhau</p></div>
+<div class="album-card" style="--r:1.5deg"><div class="album-image"><img src="./1792159749038_110008692609126310_7513591495099098469_ff2963a84f5ca889b5f733a7401aef82.jpg" alt="Ảnh gia đình 2" loading="lazy"></div><p>cùng nhau đi muôn nơi</p></div>
+<div class="album-card" style="--r:-1deg"><div class="album-image"><img src="./1792159749066_110008692609126310_7513591495099098469_52dfc30332bee404fafaf79ad651325c.jpg" alt="Ảnh gia đình 3" loading="lazy"></div><p>những ngày thật đáng nhớ</p></div>
 </div>
 </div></section>
 <section class="section letter-section" id="thu"><div class="wrap">
