@@ -70,7 +70,7 @@
 </div>
 <div class="hero-art" aria-label="Khung ảnh kỷ niệm gia đình">
 <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
-<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder" hidden></div><img id="heroImage" src="https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159749105_110008692609126310_7513591495099098469_3a3f1b9a10d4782ea013c94776fc7c6a.jpg" alt="Ảnh gia đình trong chuyến đi" loading="eager" onerror="this.onerror=null;this.src='./1792159748990_110008692609126310_7513591495099098469_88ffce7ccc97c7fd8b9b2f72da61ebb6.jpg'"><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
+<div class="photo-frame" id="heroFrame"><div class="placeholder" id="heroPlaceholder" hidden></div><img id="heroImage" src="https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159748990_110008692609126310_7513591495099098469_88ffce7ccc97c7fd8b9b2f72da61ebb6.jpg" alt="Ảnh gia đình bên hồ" loading="eager" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/bachthientran11-stack/bach-thien-2010/main/sinh-nhat-ba-me/1792159749066_110008692609126310_7513591495099098469_52dfc30332bee404fafaf79ad651325c.jpg'"><div class="caption">nhà là nơi có ba mẹ</div><div class="tape"></div></div>
 <div class="stamp">for my<br>favorite<br>people ♡</div>
 </div>
 </section>
@@ -99,15 +99,8 @@
 <article class="wish"><div class="label">Gửi người mẹ tuyệt vời</div><h3>Mẹ Nhi ♡</h3><p id="momWish">Con chào mẹ Nhi, chúc mẹ tuổi mới ngày càng trẻ ra (hahaha), nhiều thật nhiều sức khỏe để lo lắng thêm cho con đủ điều, cũng như kiếm được nhiều tiền. Con biết ơn mẹ nhiều lắm!!! Từ những bữa cơm đến những lời khuyên và những đêm thức khuya lo lắng cho con. Con biết có đôi khi mẹ gằn giọng xuống để la con chút xíu nhưng mà con cũng gằn giọng lại, có lẽ lúc đó con chưa kịp suy nghĩ, nhưng khi viết những dòng này con đã nghĩ ra là mẹ chỉ quan tâm đến sức khỏe của con mà thôi!! Con biết ơn mẹ nhiều lắm vì mẹ luôn cạnh bên con!! Yêu mẹ nhiều.</p></article>
 </div>
 </div></section>
-<section class="section" id="album" style="padding-top:55px"><div class="wrap">
-<div class="section-head"><div class="eyebrow">little moments, forever</div><h2>Album <span class="serif-italic">nhà mình.</span></h2><p>Ba khoảnh khắc gia đình mình, được giữ lại trong cuốn album nhỏ này.</p></div>
+<!-- Album ba ảnh đã được gỡ theo yêu cầu; giữ lại ảnh đầu trang. -->
 
-<div class="album" id="albumGrid">
-<div class="album-card" style="--r:-2deg"><div class="album-image"><img src="./1792159748990_110008692609126310_7513591495099098469_88ffce7ccc97c7fd8b9b2f72da61ebb6.jpg" alt="Ảnh gia đình 1" loading="lazy"></div><p>một khoảnh khắc bên nhau</p></div>
-<div class="album-card" style="--r:1.5deg"><div class="album-image"><img src="./1792159749038_110008692609126310_7513591495099098469_ff2963a84f5ca889b5f733a7401aef82.jpg" alt="Ảnh gia đình 2" loading="lazy"></div><p>cùng nhau đi muôn nơi</p></div>
-<div class="album-card" style="--r:-1deg"><div class="album-image"><img src="./1792159749066_110008692609126310_7513591495099098469_52dfc30332bee404fafaf79ad651325c.jpg" alt="Ảnh gia đình 3" loading="lazy"></div><p>những ngày thật đáng nhớ</p></div>
-</div>
-</div></section>
 <section class="section letter-section" id="thu"><div class="wrap">
 <div class="section-head"><div class="eyebrow">một điều con muốn nói</div><h2>Lá thư <span class="serif-italic">bí mật.</span></h2><p>Có một chiếc phong bì nhỏ dành riêng cho ba mẹ. Chạm vào để mở nhé.</p></div>
 <div class="letter"><div class="letter-top">MỞ KHI BA MẸ CẦN MỘT CÁI ÔM</div><h2>Gửi Ba Quân<br>&amp; Mẹ Nhi,</h2><p style="text-align:center;color:var(--muted)">Có những lời con nghĩ trong lòng rất lâu, hôm nay con muốn gửi đến ba mẹ.</p><button class="envelope" id="envelope" type="button" aria-label="Mở thư bí mật"><span class="env-body"></span><span class="env-flap"></span><span class="env-heart">♥</span></button><div class="secret-copy" id="secretCopy">Ba mẹ à,
@@ -159,4 +152,11 @@ $('#photoUpload').addEventListener('change',e=>{const files=Array.from(e.target.
 #heroFrame img#heroImage{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;z-index:1!important;left:14px!important;top:14px!important;right:14px!important;bottom:54px!important;width:calc(100% - 28px)!important;height:calc(100% - 68px)!important;object-fit:contain!important;object-position:center center!important;background:#e9d8c2!important;filter:none!important}
 #heroFrame .placeholder[hidden]{display:none!important}
 @media(max-width:760px){#heroFrame img#heroImage{object-fit:contain!important;object-position:center center!important}}
+</style>
+
+<style id="final-hero-only-fix">
+/* Giữ ảnh gia đình ở đầu trang, hiện rõ toàn bộ ảnh và không cắt mặt */
+.photo-frame{overflow:hidden!important}
+.photo-frame img#heroImage{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;z-index:2!important;left:14px!important;top:14px!important;right:14px!important;bottom:54px!important;width:calc(100% - 28px)!important;height:calc(100% - 68px)!important;object-fit:contain!important;object-position:center center!important;background:#e9d8c2!important;filter:none!important}
+#heroPlaceholder{display:none!important}
 </style>
