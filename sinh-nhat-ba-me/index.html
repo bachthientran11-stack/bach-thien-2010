@@ -36,6 +36,19 @@
  .album-card:nth-child(2) .album-image img{object-position:center 70%!important}
  .album-card:nth-child(3) .album-image img{object-position:center 86%!important}
 }
+
+/* EXTRA ZOOM CROP — enlarge the people, not the background */
+.album-image{overflow:hidden!important}
+.album-image img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;transform:scale(1.36)!important;transition:transform .35s ease!important}
+.album-card:nth-child(1) .album-image img{transform:scale(1.38)!important;object-position:center 60%!important}
+.album-card:nth-child(2) .album-image img{transform:scale(1.42)!important;object-position:center 58%!important}
+.album-card:nth-child(3) .album-image img{transform:scale(1.58)!important;object-position:center 82%!important}
+.album-card:hover .album-image img{transform:scale(1.62)!important}
+@media(max-width:760px){
+ .album-card:nth-child(1) .album-image img{transform:scale(1.24)!important;object-position:center 60%!important}
+ .album-card:nth-child(2) .album-image img{transform:scale(1.28)!important;object-position:center 58%!important}
+ .album-card:nth-child(3) .album-image img{transform:scale(1.35)!important;object-position:center 82%!important}
+}
 </style>
 </head>
 <body>
