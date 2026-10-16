@@ -24,13 +24,18 @@
  .album-card:nth-child(2) .album-image img{object-position:center 54%}
  .album-card:nth-child(3) .album-image img{object-position:center 78%}
 }
-/* Final photo fix: use same-folder image files and never crop family members */
-.photo-frame{isolation:isolate;overflow:hidden}
-.photo-frame:before{display:none}
-.photo-frame img#heroImage{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;z-index:1;inset:14px 14px 54px!important;width:calc(100% - 28px)!important;height:calc(100% - 68px)!important;object-fit:contain!important;object-position:center center!important;background:#e9d8c2!important;filter:none!important}
-.photo-frame .placeholder[hidden]{display:none!important}
-.album-image{overflow:hidden;background:#eadbc8}
-.album-image img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;background:#eadbc8!important}
+/* Crop album closer so the family is larger in each frame */
+.photo-frame img#heroImage{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;z-index:1;inset:14px 14px 54px!important;width:calc(100% - 28px)!important;height:calc(100% - 68px)!important;object-fit:cover!important;object-position:center 72%!important;background:#e9d8c2!important;filter:none!important}
+.album-image img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 68%!important;background:#eadbc8!important}
+.album-card:nth-child(1) .album-image img{object-position:center 64%!important}
+.album-card:nth-child(2) .album-image img{object-position:center 70%!important}
+.album-card:nth-child(3) .album-image img{object-position:center 86%!important}
+@media(max-width:760px){
+ .photo-frame img#heroImage{object-position:center 72%!important}
+ .album-card:nth-child(1) .album-image img{object-position:center 64%!important}
+ .album-card:nth-child(2) .album-image img{object-position:center 70%!important}
+ .album-card:nth-child(3) .album-image img{object-position:center 86%!important}
+}
 </style>
 </head>
 <body>
