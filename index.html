@@ -88,6 +88,6 @@ const sky=document.getElementById('sky');function floatItem(){if(document.hidden
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2200)}
 document.addEventListener('click',e=>{if(!e.target.closest('button')&&!e.target.closest('#envelope'))sparkles(e.clientX,e.clientY,5)});
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-// Gentle piano-like melody synthesized in-browser; starts only after tapping the music button.
-const musicBtn=document.getElementById('musicBtn');
-l
+</script>
+</body>
+</html>
