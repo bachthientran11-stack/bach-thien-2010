@@ -73,16 +73,24 @@ const envelope=document.getElementById('envelope');
 function toggleEnvelope(){envelope.classList.toggle('open');sparkles(innerWidth/2,innerHeight*.55,10);toast(envelope.classList.contains('open')?'Một chút yêu thương gửi đến bạn 💗':'Phong thư đã được cất lại nè 🎀')}
 envelope.addEventListener('click',toggleEnvelope);envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleEnvelope()}});
 const wishes=[
-"Chúc bạn luôn rạng rỡ như nắng sớm, dịu dàng như hoa và gặp thật nhiều điều may mắn trên hành trình của mình. 🌷",
-"Mong mọi ước mơ của bạn đều có cơ hội nở hoa, mọi cố gắng đều được nhìn thấy và mọi ngày đều có một điều khiến bạn mỉm cười. 💗",
-"Chúc cô gái 10A06 luôn tự tin, yêu thương bản thân và nhớ rằng bạn đặc biệt hơn bạn nghĩ rất nhiều đó! 🎀",
-"Chúc bạn học tập thật tốt, tinh thần luôn vui vẻ, deadline nhẹ nhàng và mỗi lần kiểm tra đều gặp đúng câu mình đã ôn. 📚✨",
-"Mong tuổi học trò của bạn sẽ đầy ắp những người bạn chân thành, tiếng cười trong trẻo và những kỷ niệm sau này nhớ lại vẫn thấy ấm lòng. 🫶",
-"Chúc bạn nhận được nhiều hoa, nhiều quà, nhiều lời khen — và quan trọng nhất là thật nhiều yêu thương chân thành. 💐",
-"Bạn không cần phải hoàn hảo để trở nên tuyệt vời. Hãy cứ là chính mình, vì phiên bản ấy đã có nét đẹp riêng rồi. 🌸",
-"Chúc mỗi ngày của bạn đều có một chút ngọt ngào, một chút bất ngờ và thật nhiều lý do để tự hào về chính mình. 🧁",
-"Chúc cô gái của 10A06 luôn mạnh mẽ trước khó khăn, dịu dàng với bản thân và can đảm theo đuổi điều mình yêu thích. 💌",
-"Chúc bạn luôn gặp được người tử tế, những cơ hội tốt và những khoảnh khắc bình yên mà mình xứng đáng có được. 🌈"
+"🌼🍀 Phú Quang gửi các bạn nữ lớp 10A06: Chúc các bạn ngày 20/10 luôn xinh đẹp, học giỏi, gặp nhiều may mắn. Mong các bạn luôn tự tin, mỗi ngày đều tràn đầy tiếng cười và niềm vui. Chúc các bạn một ngày vui vẻ.",
+"🌸💖 Gia Phú thân gửi các bạn nữ 10A06: Chúc một nửa thế giới của tập thể 10A06 ngày càng xinh đẹp, học giỏi, nhận được thật nhiều quà và luôn là những bông hoa rực rỡ nhất của lớp mình!",
+"✨️🫧 Huỳnh Thiện Nhân thân gửi các bạn nữ 10A06: Chúc các bạn ngày 20/10 thật vui vẻ, hạnh phúc. Mong rằng các bạn sẽ luôn tự tin, tràn đầy năng lượng và gặp được nhiều điều may mắn, tuyệt vời nha.",
+"💝💞 Lý Nhân gửi các bạn nữ 10A06: Chúc các bạn ngày 20/10 luôn lạc quan, yêu đời, khỏe mạnh, trẻ đẹp, hạnh phúc, học giỏi, may mắn, đạt được mong muốn và thành công trên đường đời nho!!! 💖",
+"💕🤯 Tuấn Minh gửi các bạn nữ lớp 10A06: Chúc các đóa hồng của C6 gặp nhiều may mắn, xinh đẹp, rạng ngời. Mong các bạn luôn tự tin, thành công trên con đường học vấn. Hãy ngày càng rạng rỡ hơn nữa nhá!!! 💖",
+"🌷💖 Hoàng Quân gửi các bảo bối lớp 10A06: Chúc các bạn nữ lớp mình ngày càng xinh đẹp, học giỏi và thành công trên con đường mình đã chọn. Mong các bạn nữ có một ngày 20/10 thật hạnh phúc, nhận được thật nhiều hoa, quà và lời chúc yêu thương nhé!",
+"💕💞 Tùng Lâm gửi các bạn nữ 10A06: Chúc các bạn nữ lớp mình ngày càng xinh đẹp, học giỏi và luôn kiên định với con đường đời!!",
+"💝🎀 Bách Thiên gửi lời chúc từ trái tim đến các công chúa 10A06: Mới học với nhau gần hai tháng thôi mà mình cảm thấy quý các bạn nữ 10A06 vô cùng!! Cảm ơn các bạn vì đã là một màu sắc rực rỡ giúp tô điểm cho bức tranh 10A06 ngày càng rực rỡ hơn. Chúc các bạn ngày càng xinh đẹp, tự tin và thành công với lựa chọn của mình! Love you so much. 😘😘😘",
+"🌷💗 Chúc bạn luôn rạng rỡ như nắng sớm, dịu dàng như hoa và gặp thật nhiều điều may mắn trên hành trình của mình.",
+"🎀✨ Mong mọi ước mơ của bạn đều có cơ hội nở hoa, mọi cố gắng đều được nhìn thấy và mọi ngày đều có một điều khiến bạn mỉm cười.",
+"🌸💖 Chúc cô gái 10A06 luôn tự tin, yêu thương bản thân và nhớ rằng bạn đặc biệt hơn bạn nghĩ rất nhiều đó!",
+"📚✨ Chúc bạn học tập thật tốt, tinh thần luôn vui vẻ, deadline nhẹ nhàng và mỗi lần kiểm tra đều gặp đúng câu mình đã ôn.",
+"🫶🌷 Mong tuổi học trò của bạn sẽ đầy ắp những người bạn chân thành, tiếng cười trong trẻo và những kỷ niệm sau này nhớ lại vẫn thấy ấm lòng.",
+"💐💌 Chúc bạn nhận được nhiều hoa, nhiều quà, nhiều lời khen — và quan trọng nhất là thật nhiều yêu thương chân thành.",
+"🌸🎀 Bạn không cần phải hoàn hảo để trở nên tuyệt vời. Hãy cứ là chính mình, vì phiên bản ấy đã có nét đẹp riêng rồi.",
+"🧁💗 Chúc mỗi ngày của bạn đều có một chút ngọt ngào, một chút bất ngờ và thật nhiều lý do để tự hào về chính mình.",
+"💌🌷 Chúc cô gái của 10A06 luôn mạnh mẽ trước khó khăn, dịu dàng với bản thân và can đảm theo đuổi điều mình yêu thích.",
+"🌈💖 Chúc bạn luôn gặp được người tử tế, những cơ hội tốt và những khoảnh khắc bình yên mà mình xứng đáng có được."
 ];
 let lastWish=-1;
 document.getElementById('wishBtn').addEventListener('click',()=>{let n;do{n=Math.floor(Math.random()*wishes.length)}while(n===lastWish&&wishes.length>1);lastWish=n;const t=document.getElementById('wishText');t.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:450});t.textContent=wishes[n];document.getElementById('jar').textContent=['🫙💗','🍯✨','💐💌','🎀🌸'][Math.floor(Math.random()*4)];sparkles(innerWidth/2,innerHeight*.68,14)});
